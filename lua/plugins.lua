@@ -1,6 +1,6 @@
 return require('packer').startup(function()
     -- other plugins...
-    
+
     use 'williamboman/mason.nvim'    
     use 'williamboman/mason-lspconfig.nvim'
     use 'neovim/nvim-lspconfig' 
@@ -18,14 +18,17 @@ return require('packer').startup(function()
     use 'hrsh7th/cmp-path'                              
     use 'hrsh7th/cmp-buffer'                            
     use 'hrsh7th/vim-vsnip'                             
- 
-    use 'puremourning/vimspector'
-    
 
+    use 'puremourning/vimspector'
+
+    use {
+        'nvim-lualine/lualine.nvim',
+        requires = { 'nvim-tree/nvim-web-devicons', opt = true }
+    }
     use 'rmagatti/auto-session'
     -- Experimental
     use 'nvim-treesitter/nvim-treesitter'
 
 
-   -- other plugins...
+    -- other plugins...
 end)
